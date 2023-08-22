@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    height: 100vh;
+    background-color: rgb(218, 229, 238);
+    display: flex;
+    flex-direction: column;
+   
+}
+.container{
+    width:450px;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    
+}
+
+#sizeSlider{
+    width: 100%;
+}
+.size-value{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.cell{
+    /* border: 0.5px solid black; */
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+.btn{
+    width: 100%;
+  border: 1px solid black;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  margin: 10px;
+  background-color: rgb(218, 229, 238);
+  
+}
+button{
+    padding: 15px 20px;
+  border: 1px solid var(--primary-dark);
+  border-radius: 5px;
+}
+.active {
+    background-color: rgb(25, 38, 68);
+    color: aliceblue;
+  }
+.settings{
+    /* border: 2px solid black; */
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+    margin-left: 150px;
+
+}
+
+.main{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 70px;
+    width: 100%;
+}
+
+.title{
+    margin-top: 30px;
+    font-size: 69px;
+}
+.color{
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 50%;
+}
+input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+@media (max-width: 868px){
+    .main{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap:40px;
+
+        
+    }
+
+    .container{
+        width: 360px;
+        height: 360px;
+        margin:10px;
+        position: relative;
+        padding: 10px;
+
+    }
+    .settings{
+        margin-right: 130px;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 868px) {
+
+    .main {
+        flex-direction: row; /* Reset the flex direction for settings and container */
+        justify-content: space-between; /* Spread them apart */
+        align-items: center;
+        padding-left: 50px;
+      }
+
+      .container{
+        margin-right: 100px;
+      }
+      .settings {
+        width: 250px; 
+        margin: 0;
+      }
+}
