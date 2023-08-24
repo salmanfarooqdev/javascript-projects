@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(237, 237, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    background-color: rgb(127, 117, 117);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 2px 7px 10px rgba(0, 0, 0, 0.6); 
+   
+}   
+
+
+.inputDisplay{
+    width: 350px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+.display{
+    width: 100%;
+    height: 100%;
+    font-size: 29px;
+    background-color: rgb(234, 227, 227);
+    border: none;
+    border: 2px solid black;
+    padding: 45px 10px 0 10px;
+    text-align: right;
+    overflow: hidden;
+    pointer-events: none;
+    border-radius: 5px;
+
+
+}
+.topbtnDisplay{
+    width: 350px;
+    height: 80px;
+    
+    display: flex;
+    justify-content:space-around;
+    gap: 20px;
+    
+    
+}
+.Topbtn{
+    width: 100%;
+    cursor: pointer;
+    margin-bottom:10px ;
+    font-size: 18px;
+    background-color: rgb(230, 168, 121);
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); 
+
+}
+
+.Topbtn:hover{
+    background-color: rgb(218, 153, 102);
+}
+
+.del{
+    background-color: rgb(225, 132, 103);
+
+}
+.del:hover{
+    background-color: rgb(214, 114, 84);
+}
+
+.allbuttons{
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 250px;
+    
+}
+.btn, .opbtn, .equalbtn{
+    width: calc(25% - 10px); /* 10px for margin */
+  border-radius: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  border: none;
+  border: 2px solid black;
+  margin: 5px; 
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); 
+
+}
+
+
+
+.btn:hover{
+    background-color: rgb(193, 198, 203);
+    transition: 0.4s;
+}
+
+@media (max-width: 600px) {
+    .container {
+      width: 80%; 
+    }
+    .inputDisplay, .topbtnDisplay, .allbuttons{
+        width:100%;
+    }
+
+   
+}
