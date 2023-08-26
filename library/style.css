@@ -1,0 +1,228 @@
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+/* .header-content{
+    background-color:rgb(244, 247, 250);
+    padding: 35px;
+    font-size: 38px;
+    padding-left: 70px;
+    font-family:serif;
+    font-weight: bold;
+    
+} */
+header {
+    background-color: rgb(250, 252, 253);
+    padding: 27px;
+    font-size: 38px;
+    font-family: serif;
+    font-weight: bold;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.header-content {
+    padding-left: 70px;
+}
+
+main{
+    display: flex;
+    background-color:#f0eef1;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    flex:1;
+    padding-left: 120px;
+    padding-right: 78px;
+   
+}
+
+.addbook{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.addbook:hover{
+    background-color: rgb(221, 223, 224);
+}
+
+.bookgrid{
+   
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    /* align-content: flex-start; */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.read, .delete, .notread{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    height: 55px;
+}
+
+.read{
+    background-color: rgb(145, 221, 149);
+}
+
+.read.active{
+    background-color: rgb(171, 87, 64);
+}
+
+.notread{
+    background-color: rgb(201, 97, 68);
+}
+
+.read:hover{
+    background-color: rgb(123, 207, 128);
+
+}
+.notread:hover{
+    background-color: rgb(171, 86, 63);
+
+}
+
+.delete{
+    background-color: rgb(244, 226, 226);
+}
+
+.delete:hover{
+
+    background-color: rgb(231, 205, 205);
+}
+
+.box{
+    height: 300px;
+    width: 350px;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    border-radius: 20px;
+    /* margin-right: auto; */
+    padding: 20px;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+footer {
+    
+    background-color: aquamarine;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+
+  .overlay.active{
+    display: block;
+  }
+
+ .modal-container{
+    width: 350px;
+    height: 390px;
+    border: 2px solid black;
+    background-color: rgb(217, 222, 226);
+    padding-right: 7px;
+    border-radius: 20px;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+ }
+
+ .modal-container.active{
+    display: block;
+ }
+ .title{
+    margin-bottom: 20px;
+ }
+
+ .close{
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+ }
+ .model-content{
+    
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+    width: 100%;
+    height: 100%;
+
+    /* display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-evenly; */
+    
+ }
+
+ .inputclass input{
+    width: 100%;
+    height: 50px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    
+ }
+
+ .check{
+    margin: 10px;
+   
+ }
+ .check input{
+    transform: scale(1.5);
+    margin-left: 10px;
+ }
+
+@media (max-width:868px)
+{
+    main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .bookgrid {
+        justify-content: flex-start; /* Align to the left on smaller screens */
+    }
+
+    .box {
+        width: calc(100% - 40px); /* Adjust width for two boxes per row */
+        margin: 20px;
+    }
+}
