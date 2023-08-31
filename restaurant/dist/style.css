@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 100vh; */
+
+    background-image: url('/dist/pizza.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed as you scroll */
+   
+  }
+
+  .header{
+    background-color: rgb(42, 37, 37);
+    color: aliceblue;
+    width: 100%;
+    padding: 2rem;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn{
+    padding: 1rem;
+  font-size: 1.3rem;
+  background-color: transparent;
+  border: none;
+  transition: transform 0.3s;
+  color: aliceblue;
+  margin-top: 10px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+
+  }
+  .btn.active {
+    border-bottom: 2px solid aliceblue;
+  }
+  .btn:hover{
+    transform: translateY(-10%);
+  }
+
+  .footer{
+    background-color: rgb(42, 37, 37);
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 1rem;
+color: aliceblue;
+  }
+
+  .box{
+    width: 100px;
+    height: 100px;
+    border: 2px solid beige;
+    background-color: bisque;
+  }
+
+  /* .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  .homediv{
+    /* height: 550px;
+    width: 600px; */
+    padding: 80px 120px 80px 120px;
+    text-align: center;
+    color: aliceblue;
+    font-size: 25px;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px auto;
+    background-color: rgba(0, 0, 0, 0.46);
+
+    
+
+  }
+
+  .menudiv{
+   display: grid;
+   gap:70px;
+   padding: 90px;
+   margin: 50px;
+   background-color: rgba(0, 0, 0, 0.46);
+   grid-template-columns: repeat(2, 1fr);  
+   
+}
+.menudiv img{
+    width: 200px;
+}
+
+  .menu-item{
+    color: aliceblue;
+    /* border: 2px solid white; */
+    background-color: rgba(0, 0, 0, 0.656);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+
+
+  }
+
+  .menu-item:hover{
+    background-color: rgba(74, 71, 71, 0.656);
+
+  }
+
+p{
+    margin: 10px;
+}
+  img{
+    width: 300px;
+    margin: 10px;
+
+  }
+
+  .contactdiv{
+    padding: 80px 120px 80px 120px;
+    text-align: center;
+    color: aliceblue;
+    font-size: 25px;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px auto;
+    background-color: rgba(0, 0, 0, 0.46);
+
+  }
+
+  .contactdiv img{
+    width: 500px;
+  }
+
+  .fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; 
+    pointer-events: none; 
+  }
+
+  @media (max-width:768px)
+  {
+    .header {
+        font-size: 25px; /* Reduce font size for header */
+        padding: 1rem; /* Reduce padding for header */
+        
+      }
+      .restaurant{
+        align-items: center;
+      }
+
+      .homediv {
+        width: 90%; /* Adjust width for homediv and menudiv */
+        margin: 20px auto; /* Center-align the divs */
+        padding: 5px; /* Adjust padding for homediv and menudiv */
+      }
+
+      img {
+        max-width: 90%; /* Make images responsive to their container */
+        height: auto; /* Maintain image aspect ratio */
+        margin: 10px auto; /* Center-align the images */
+      }
+      .content{
+        min-height: 100vh;
+        
+      }
+      .footer {
+        padding: 0.5rem; /* Reduce padding for footer */
+      
+      }
+
+      .menudiv{
+        grid-template-columns: 1fr;
+        padding: 50px;
+        margin: 20px; 
+      }
+      
+
+      .content{
+        background-size: cover;
+      }
+
+      .contactdiv{
+        padding: 50px 30px 50px 30px;
+        
+        margin: 20px;
+       
+    
+      }
+    
+      .contactdiv img{
+        max-width: 100%;
+      }
+    
+  }
+  
